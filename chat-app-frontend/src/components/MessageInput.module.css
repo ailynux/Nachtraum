@@ -1,0 +1,53 @@
+/* components/MessageInput.module.css */
+
+/* Message Input Container */
+.container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 4xl;
+  }
+  
+  /* Input Field */
+  .input {
+    flex-grow: 1;
+    padding: 0.75rem;
+    border-radius: 0.375rem 0 0 0.375rem;
+    background-color: #0b0c10; /* Darker background for dark mode */
+    color: #c5c6c7; /* Softer text color for dark mode */
+    transition: all 0.15s ease-in-out;
+    outline: none;
+    border: 2px solid #45a29e; /* Neon border */
+  }
+  
+  .input.light {
+    background-color: #f0f0f0; /* Light input field */
+    color: #000; /* Dark text for light mode */
+    border: 2px solid #ccc; /* Subtle border */
+  }
+  
+  .input:focus {
+    box-shadow: 0 0 0 2px #28a745; /* Focus glow effect */
+  }
+  
+  /* Send Button */
+  .button {
+    padding: 0.75rem 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 0 0.375rem 0.375rem 0;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #45A049;
+    transform: scale(1.05);
+  }
+  
+  .button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #28a745;
+  }
+  

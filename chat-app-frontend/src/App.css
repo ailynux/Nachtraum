@@ -1,0 +1,3 @@
+.avatar-image {
+  object-fit: cover;  /* Ensures the image fits the container without distortion */
+}
