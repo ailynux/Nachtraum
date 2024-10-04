@@ -1,23 +1,57 @@
 # 🌙 Nachtraum - Real-Time Chat App 🗨️ 
 
-[![MIT License](https://img.shields.io/github/license/your-username/Nachtraum)](LICENSE)
-[![React](https://img.shields.io/badge/Frontend-React-blue)](https://reactjs.org/)
-[![ASP.NET Core](https://img.shields.io/badge/Backend-ASP.NET%20Core-brightgreen)](https://dotnet.microsoft.com/apps/aspnet)
-[![TypeScript](https://img.shields.io/badge/Code-TypeScript-%233178c6)](https://www.typescriptlang.org/)
-[![Issues](https://img.shields.io/github/issues/your-username/Nachtraum)](https://github.com/your-username/Nachtraum/issues)
+<p align="center">
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge&logo=law&logoColor=white" alt="MIT License">
+  </a>
+  <a href="https://reactjs.org/">
+    <img src="https://img.shields.io/badge/Frontend-React-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React">
+  </a>
+  <a href="https://dotnet.microsoft.com/apps/aspnet">
+    <img src="https://img.shields.io/badge/Backend-ASP.NET%20Core-5C2D91?style=for-the-badge&logo=dotnet&logoColor=white" alt="ASP.NET Core">
+  </a>
+  <a href="https://www.typescriptlang.org/">
+    <img src="https://img.shields.io/badge/Code-TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  </a>
+  <a href="https://github.com/ailynux/Nachtraum/issues">
+    <img src="https://img.shields.io/github/issues/ailynux/Nachtraum?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Issues">
+  </a>
+</p>
 
-Welcome to **Nachtraum**, a real-time chat app where you can express yourself using custom emojis and experience seamless real-time messaging with friends.
+Welcome to the world of **Nachtraum**, a real-time chat app where every conversation happens in the dark corners of the digital world. Personalize your chats with custom emojis and experience sleek, seamless communication like never before.
 
-![image](https://github.com/ailynux/chatroom-csharp/assets/95152597/5482212e-c73a-4bb9-b0a4-83c10dff49ec)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/072828cd-aac9-4241-8228-8c27c123c0c2" alt="Nachtraum Chat Interface" width="700" />
+  <img src="https://github.com/user-attachments/assets/ced45217-707d-4505-a5da-c768191cd0c6" alt="Dark Mode and Light Mode" width="700" />
+</p>
 
-## 🚀 Features
+*Above: Real-time chat interface featuring dark mode and fully customizable emoji support.*
 
-- **Real-Time Messaging**: Communicate with your friends instantly using WebSockets/SignalR.
-- **Custom Emojis**: Choose from a selection of emojis or upload your own to personalize your conversations.
-- **User Authentication**: Sign up, log in, and start chatting securely. Your chat history is tied to your account.
-- **Message History**: Never miss a message! View all your previous conversations with easy-to-access message history.
-- **Typing Indicator**: Know when someone is typing with a live indicator for a more dynamic chat experience.
-- **Dark Mode**: Switch between light and dark modes for a modern and user-friendly interface.
+## 🌟 Connect with Me
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/ailyndiaz01">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn">
+  </a>
+  <a href="https://leetcode.com/ailynux">
+    <img src="https://img.shields.io/badge/LeetCode-Profile-orange?style=for-the-badge&logo=leetcode" alt="LeetCode">
+  </a>
+  <a href="https://exercism.org/profiles/ailynux">
+    <img src="https://img.shields.io/badge/Exercism-Profile-purple?style=for-the-badge&logo=exercism" alt="Exercism">
+  </a>
+  <a href="https://github.com/ailynux">
+    <img src="https://img.shields.io/badge/GitHub-ailynux-lightgrey?style=for-the-badge&logo=github" alt="GitHub">
+  </a>
+</p>
+
+## Features
+
+- **Real-Time Messaging**: Lightning-fast, instant communication powered by WebSockets/SignalR.
+- **Custom Emojis**: Make your conversations stand out—choose or create your own emojis.
+- **User Authentication**: Securely log in and chat, with your message history tied to your account.
+- **Message History**: View all previous conversations at any time.
+- **Typing Indicator**: Live updates let you know when someone is typing in real-time.
+- **Dark Mode**: A theme for those who thrive in the night.
 
 ## 💻 Tech Stack
 
@@ -25,6 +59,8 @@ Welcome to **Nachtraum**, a real-time chat app where you can express yourself us
 - **Back-End**: [ASP.NET Core](https://dotnet.microsoft.com/apps/aspnet) with [SignalR](https://dotnet.microsoft.com/apps/aspnet/signalr)
 - **Database**: Azure Cloud
 - **Styling**: CSS Modules / [TailwindCSS](https://tailwindcss.com/)
+
+
 
 ## 📦 Installation
 
@@ -38,18 +74,47 @@ cd Nachtraum
 ```
 
 ## 🛠️ Usage
-- Register a new account or log in with your existing credentials.
-- Start a chat with any online user.
-- Select emojis or upload custom ones to use in your chats.
-- Enjoy the real-time messaging experience, complete with typing indicators and message history.
+- **Account Creation & Login**: Register a new account or log in with your existing credentials.
+- **Start a Chat**: Connect with any online user and start chatting immediately.
+- **Custom Emojis**: Personalize your messages by selecting or uploading custom emojis.
+- **Real-Time Messaging**: Experience seamless, real-time chat with features like typing indicators and message history.
 
 ## 🎨 Dark Mode
-- Toggle between light and dark mode in the user settings.
-- Dark mode provides a sleek, modern feel that's easy on the eyes during late-night chats.
+- **Light/Dark Mode Toggle**: Switch between light and dark modes in the user settings for a modern, sleek interface.
+- **Night-Friendly**: Dark mode is easy on the eyes, especially during those late-night conversations.
 
-## 🏗️ Future Features
-- **Group Chats**: Chat with multiple friends in one conversation.
-- **Video and Voice Calls**: Add video and voice communication to make your chats more interactive.
-- **Push Notifications**: Get notified when someone messages you, even when you're not in the app.
+## ✅ What's Been Added So Far
+- **Real-Time Messaging**: Implemented WebSockets/SignalR for live, fast communication.
+- **Custom Emojis**: Users can select from default emojis or upload their own for a personalized experience.
+- **Typing Indicator**: Live updates when the other user is typing, keeping the chat dynamic and engaging.
+- **Dark Mode**: A modern, sleek dark theme for those who prefer to chat in the shadows.
+
+## 📊 Stats & Insights
+
+<p align="center">
+  <img src="https://ghchart.rshah.org/ailynux" alt="GitHub Contributions Chart" />
+</p>
+
+*Stay up-to-date with my latest GitHub activity.*
+
+<p align="center">
+  <img src="https://img.shields.io/github/stars/ailynux/Nachtraum?style=social" alt="GitHub Stars" />
+  <img src="https://img.shields.io/github/forks/ailynux/Nachtraum?style=social" alt="GitHub Forks" />
+  <img src="https://img.shields.io/github/watchers/ailynux/Nachtraum?style=social" alt="GitHub Watchers" />
+</p>
+
+## 🏗️ COMING SOON: Future Features
+- **Group Chats**: Chat with multiple friends at once—create group conversations for a more interactive experience.
+- **Video and Voice Calls**: Add real-time video and voice communication to take your conversations to the next level.
+- **Push Notifications**: Get instant notifications when you receive a new message, even when you're not in the app.
+- **File Sharing**: Upload and share files directly within the chat for better collaboration.
+- **Emoji Reactions**: React to specific messages with emojis, adding another layer of fun interaction.
+- **User Authentication**: Secure account creation, login, and chat history tied to your profile.
+- **Message History**: All previous conversations are stored and accessible at any time.
+  
+*Track the growth of **Nachtraum** with real-time stats.*
+
+Stay tuned—more features are on the way to enhance your chat experience and make **Nachtraum** the ultimate messaging platform.
+
 
 
