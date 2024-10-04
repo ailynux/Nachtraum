@@ -1,9 +1,9 @@
 # 🌙 Nachtraum - Real-Time Chat App 🗨️ 
 
 <p align="center">
-  <a href="LICENSE">
+<!--   <a href="LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge&logo=law&logoColor=white" alt="MIT License">
-  </a>
+  </a>  adding later-->
   <a href="https://reactjs.org/">
     <img src="https://img.shields.io/badge/Frontend-React-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React">
   </a>
