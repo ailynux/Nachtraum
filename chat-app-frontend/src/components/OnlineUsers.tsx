@@ -1,5 +1,3 @@
-// src/components/OnlineUsers.tsx
-
 import React, { useEffect, useState, useRef } from "react";
 import * as signalR from "@microsoft/signalr";
 
@@ -14,7 +12,7 @@ const OnlineUsers: React.FC = () => {
       .withAutomaticReconnect()
       .build();
 
-    connectionRef.current = connection; // Store the connection in the ref
+    connectionRef.current = connection;
 
     connection.on("UpdateUserCount", (count: number) => {
       setUserCount(count);
@@ -33,8 +31,24 @@ const OnlineUsers: React.FC = () => {
   }, []);
 
   return (
-    <div className="text-gray-900 dark:text-gray-100">
-      Online Users: {userCount}
+    <div className="relative p-4 bg-gray-900 bg-opacity-80 border border-gray-700 rounded-lg shadow-lg text-center">
+      {/* Title */}
+      <h2 className="text-lg font-semibold text-gray-300 tracking-wide">
+        Online Users
+      </h2>
+
+      {/* User Count */}
+      <p className="text-4xl font-bold text-gray-100 mt-2">
+        {userCount}
+      </p>
+
+      {/* Status */}
+      <div className="text-sm text-gray-400 mt-4">
+        Connected to Nachtraum
+      </div>
+
+      {/* Background effect */}
+      <div className="absolute inset-0 bg-grid-cyberpunk opacity-10 pointer-events-none"></div>
     </div>
   );
 };

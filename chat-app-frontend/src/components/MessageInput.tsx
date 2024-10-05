@@ -1,5 +1,3 @@
-// src/components/MessageInput.tsx
-
 import React, { useState } from "react";
 
 interface MessageInputProps {
@@ -30,21 +28,25 @@ const MessageInput: React.FC<MessageInputProps> = ({ onSend, onTyping, theme }) 
   };
 
   return (
-    <div className="flex items-center gap-2 w-full">
+    <div className="flex items-center gap-3 w-full">
       <input
         type="text"
-        className={`flex-grow p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 ${
+        className={`flex-grow p-3 rounded-lg focus:outline-none focus:ring-4 focus:ring-red-500 transition duration-300 ${
           theme === 'dark'
-            ? 'bg-gray-800 text-white border border-gray-700'
-            : 'bg-gray-100 text-gray-900 border border-gray-300'
+            ? 'bg-gray-800 text-white border border-gray-700 focus:ring-red-500'
+            : 'bg-gray-100 text-gray-900 border border-gray-300 focus:ring-blue-400'
         }`}
         value={message}
         onChange={handleTyping}
         onKeyPress={handleKeyPress}
-        placeholder="Type your message here..."
+        placeholder="Type your message..."
       />
       <button
-        className="px-4 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-all focus:outline-none focus:ring-2 focus:ring-blue-400"
+        className={`px-5 py-3 rounded-lg font-semibold transition-all focus:outline-none focus:ring-4 ${
+          theme === 'dark'
+            ? 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500'
+            : 'bg-gray-500 text-white hover:bg-gray-600 focus:ring-gray-400'
+        }`}
         onClick={handleSend}
       >
         Send

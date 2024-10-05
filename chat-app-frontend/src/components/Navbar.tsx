@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import { FaHome, FaInfoCircle, FaListAlt, FaEnvelope } from 'react-icons/fa';
-import SearchBar from './SearchBar';  // <-- Ensure this import is correct
+import SearchBar from './SearchBar';  // Ensure this import is correct
 
 const Navbar: React.FC<{ theme: string; toggleTheme: () => void }> = ({ theme, toggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,12 +11,12 @@ const Navbar: React.FC<{ theme: string; toggleTheme: () => void }> = ({ theme, t
   const messages = ['Hey, how’s it going?', 'Welcome to the chatroom!', 'Let’s talk about tech.', 'Game night!'];  // Example messages
 
   return (
-    <nav className="bg-gradient-to-r from-indigo-500 via-blue-500 to-blue-500 dark:bg-gray-900 shadow-lg fixed top-0 left-0 w-full z-50">
+    <nav className={`bg-black dark:bg-black shadow-lg fixed top-0 left-0 w-full z-50 backdrop-filter backdrop-blur-md bg-opacity-75`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#top" className="text-3xl font-extrabold text-white hover:text-blue-300">
+            <a href="#top" className="text-4xl font-extrabold text-red-600 dark:text-red-500 hover:text-red-700 dark:hover:text-red-400 transition-colors">
               Nachtraum
             </a>
           </div>
@@ -32,28 +32,28 @@ const Navbar: React.FC<{ theme: string; toggleTheme: () => void }> = ({ theme, t
             </div>
           </div>
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-8">
             <a
               href="#top"
-              className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium flex items-center"
+              className="text-red-500 dark:text-red-500 hover:text-red-600 dark:hover:text-red-400 transition duration-300 ease-in-out px-3 py-2 rounded-md text-sm font-medium flex items-center"
             >
               <FaHome className="mr-1" /> Home
             </a>
             <a
               href="#about"
-              className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium flex items-center"
+              className="text-red-500 dark:text-red-500 hover:text-red-600 dark:hover:text-red-400 transition duration-300 ease-in-out px-3 py-2 rounded-md text-sm font-medium flex items-center"
             >
               <FaInfoCircle className="mr-1" /> About
             </a>
             <a
               href="#features"
-              className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium flex items-center"
+              className="text-red-500 dark:text-red-500 hover:text-red-600 dark:hover:text-red-400 transition duration-300 ease-in-out px-3 py-2 rounded-md text-sm font-medium flex items-center"
             >
               <FaListAlt className="mr-1" /> Features
             </a>
             <a
               href="#contact"
-              className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium flex items-center"
+              className="text-red-500 dark:text-red-500 hover:text-red-600 dark:hover:text-red-400 transition duration-300 ease-in-out px-3 py-2 rounded-md text-sm font-medium flex items-center"
             >
               <FaEnvelope className="mr-1" /> Contact
             </a>
@@ -62,7 +62,7 @@ const Navbar: React.FC<{ theme: string; toggleTheme: () => void }> = ({ theme, t
           <div className="flex items-center">
             <button
               onClick={toggleTheme}
-              className="text-white hover:text-blue-300 focus:outline-none mr-4"
+              className="text-red-500 hover:text-red-600 dark:hover:text-red-400 focus:outline-none mr-4 transition-colors"
               aria-label="Toggle Theme"
             >
               {theme === 'dark' ? (
@@ -91,7 +91,7 @@ const Navbar: React.FC<{ theme: string; toggleTheme: () => void }> = ({ theme, t
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="text-white hover:text-blue-300 focus:outline-none"
+                className="text-red-500 hover:text-red-600 dark:hover:text-red-400 focus:outline-none"
                 aria-label="Toggle Menu"
               >
                 {!isOpen ? (
@@ -133,25 +133,25 @@ const Navbar: React.FC<{ theme: string; toggleTheme: () => void }> = ({ theme, t
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <a
               href="#top"
-              className="block text-white hover:text-blue-300 px-3 py-2 rounded-md text-base font-medium"
+              className="block text-red-500 hover:text-red-600 dark:text-red-500 dark:hover:text-red-400 px-3 py-2 rounded-md text-base font-medium transition duration-300"
             >
               Home
             </a>
             <a
               href="#about"
-              className="block text-white hover:text-blue-300 px-3 py-2 rounded-md text-base font-medium"
+              className="block text-red-500 hover:text-red-600 dark:text-red-500 dark:hover:text-red-400 px-3 py-2 rounded-md text-base font-medium transition duration-300"
             >
               About
             </a>
             <a
               href="#features"
-              className="block text-white hover:text-blue-300 px-3 py-2 rounded-md text-base font-medium"
+              className="block text-red-500 hover:text-red-600 dark:text-red-500 dark:hover:text-red-400 px-3 py-2 rounded-md text-base font-medium transition duration-300"
             >
               Features
             </a>
             <a
               href="#contact"
-              className="block text-white hover:text-blue-300 px-3 py-2 rounded-md text-base font-medium"
+              className="block text-red-500 hover:text-red-600 dark:text-red-500 dark:hover:text-red-400 px-3 py-2 rounded-md text-base font-medium transition duration-300"
             >
               Contact
             </a>

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChatAppBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3b343a626f80620426f1c4d9417197226c5a4e9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f41721e2ed8a615ab8a42016b11abd2665f4b517")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChatAppBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChatAppBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

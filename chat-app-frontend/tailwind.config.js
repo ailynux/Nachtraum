@@ -1,4 +1,3 @@
-// tailwind.config.js
 const plugin = require('tailwindcss/plugin');
 
 module.exports = {
@@ -7,26 +6,30 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Extended color palette with custom shades
+        // Simplified and focused on a red/black theme
         primary: {
-          light: '#a6d4fa',
-          DEFAULT: '#2196f3',
-          dark: '#1769aa',
+          light: '#ff6b6b',
+          DEFAULT: '#ff0000', // Main red color
+          dark: '#b20000', // Darker red
         },
         secondary: {
-          light: '#ffb74d',
-          DEFAULT: '#ff9800',
-          dark: '#f57c00',
+          light: '#c4c4c4',
+          DEFAULT: '#424242', // Dark gray for contrast
+          dark: '#1b1b1b', // Darker for a deeper black effect
+        },
+        neutral: {
+          light: '#f5f5f5',
+          DEFAULT: '#9e9e9e',
+          dark: '#212121',
         },
         accent: {
           light: '#ff4081',
           DEFAULT: '#f50057',
           dark: '#c51162',
         },
-        neutral: {
-          light: '#fafafa',
-          DEFAULT: '#9e9e9e',
-          dark: '#424242',
+        background: {
+          light: '#fdfdfd', // Light background for light mode
+          dark: '#0a0a0a', // Deep black background for dark mode
         },
       },
       backgroundSize: {
@@ -66,12 +69,12 @@ module.exports = {
         'gradient-conic': 'conic-gradient(var(--tw-gradient-stops))',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-light': "linear-gradient(-45deg, #f3ec78, #af4261)",
-        'gradient-dark': "linear-gradient(-45deg, #200122, #6f0000)",
+        'gradient-dark': "linear-gradient(-45deg, #200122, #6f0000)", // Deep red/black gradient for dark mode
       }),
       boxShadow: {
-        'neon': '0 0 10px rgba(255, 255, 255, 0.5)',
-        'neon-primary': '0 0 10px rgba(33, 150, 243, 0.7)',
-        'neon-accent': '0 0 10px rgba(245, 0, 87, 0.7)',
+        'neon': '0 0 10px rgba(255, 0, 0, 0.7)', // Neon red shadow
+        'neon-primary': '0 0 10px rgba(255, 0, 0, 0.8)', // Neon red for primary elements
+        'neon-accent': '0 0 10px rgba(245, 0, 87, 0.7)', // Neon accent for a secondary effect
       },
       typography: theme => ({
         DEFAULT: {
@@ -84,7 +87,7 @@ module.exports = {
               },
             },
             h1: {
-              color: theme('colors.neutral.dark'),
+              color: theme('colors.primary.DEFAULT'),
             },
             h2: {
               color: theme('colors.neutral.dark'),
@@ -108,7 +111,7 @@ module.exports = {
               },
             },
             h1: {
-              color: theme('colors.neutral.light'),
+              color: theme('colors.primary.light'),
             },
             h2: {
               color: theme('colors.neutral.light'),
@@ -138,7 +141,7 @@ module.exports = {
     require('@tailwindcss/typography'), // Prose classes
     require('@tailwindcss/aspect-ratio'), // Aspect ratio utilities
     require('@tailwindcss/line-clamp'), // Truncate text utilities
-    plugin(function({ addUtilities, e, theme }) {
+    plugin(function({ addUtilities }) {
       // Custom 3D transform utilities
       const newUtilities = {
         '.preserve-3d': {

@@ -9,6 +9,7 @@ interface Message {
   text: string;
   shape: string;
   avatarImage: string | null;
+  timestamp: string; // Corrected timestamp type
 }
 
 interface ChatProps {
@@ -33,6 +34,7 @@ const Chat: React.FC<ChatProps> = ({ messages }) => {
               color={message.color}
               shape={message.shape}
               avatarImage={message.avatarImage}
+              timestamp={message.timestamp} // Pass the timestamp prop here
             />
           );
         })

@@ -1,3 +1,139 @@
 .avatar-image {
   object-fit: cover;  /* Ensures the image fits the container without distortion */
 }
+/* Tailwind CSS customization */
+
+/* Glitch Effect */
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-1px, 1px);
+  }
+  40% {
+    transform: translate(1px, -1px);
+  }
+  60% {
+    transform: translate(-0.5px, 0.5px);
+  }
+  80% {
+    transform: translate(0.5px, -0.5px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* Flicker Effect */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; } /* Reduced flicker for clearer text */
+}
+
+/* Neon Pulse Effect */
+@keyframes neon-pulse {
+  0% { text-shadow: 0 0 8px #ff0000, 0 0 15px #ff0000, 0 0 30px #ff0000; }
+  50% { text-shadow: 0 0 15px #39ff14, 0 0 30px #39ff14, 0 0 50px #39ff14; }
+  100% { text-shadow: 0 0 8px #ff0000, 0 0 15px #ff0000, 0 0 30px #ff0000; }
+}
+
+/* Text Styles */
+.text-neon-green {
+  font-size: 1.25rem; /* Slightly larger text for better visibility */
+  color: #39ff14;
+  text-shadow: 0 0 8px #39ff14, 0 0 15px #39ff14, 0 0 20px #39ff14; /* Reduced glow */
+  animation: neon-pulse 2s infinite alternate;
+}
+
+.text-neon-red {
+  font-size: 1.25rem; /* Slightly larger text */
+  color: #ff0000;
+  text-shadow: 0 0 8px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000; /* Reduced glow */
+  animation: flicker 1.5s infinite alternate; /* Subtle flicker */
+}
+
+/* Border Styles */
+.border-neon-green {
+  border-color: #39ff14;
+  box-shadow: 0 0 8px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14;
+}
+
+.shadow-neon-red {
+  box-shadow: 0 0 8px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000; /* Reduced neon glow */
+}
+
+/* Background Grid */
+.bg-grid-cyberpunk {
+  background-image: url('/public/turnrotation.webp'); /* Subtle background pattern */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1; /* Make sure the grid doesn't interfere with readability */
+}
+
+/* Optional hover glow for the container */
+.shadow-lg {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Animated Glitch Effect */
+.animate-glitch {
+  animation: glitch 1.5s infinite;
+}
+
+/* Animated Flicker Effect */
+.animate-flicker {
+  animation: flicker 1.5s infinite;
+}
+
+/* Animated Neon Pulse */
+.animate-neon-pulse {
+  animation: neon-pulse 2s ease-in-out infinite;
+}
+
+/* Additional Improvements */
+
+/* Neon Highlight */
+.neon-highlight {
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000;
+}
+
+/* Cyberpunk Glitch Text */
+.cyberpunk-glitch {
+  position: relative;
+  font-size: 1.25rem; /* Make the text slightly larger */
+  color: #ff0000;
+  text-shadow: -1px 0 #ff0000, 1px 0 #39ff14, 2px 2px #39ff14;
+  animation: glitch 1s infinite alternate-reverse;
+}
+
+.cyberpunk-glitch::before,
+.cyberpunk-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+}
+
+.cyberpunk-glitch::before {
+  text-shadow: -2px 0 #ff0000, 2px 0 #39ff14;
+  top: 2px;
+  left: -2px;
+  animation: glitch 1s infinite reverse;
+}
+
+.cyberpunk-glitch::after {
+  text-shadow: 2px 0 #39ff14, -2px 0 #ff0000;
+  top: -2px;
+  left: 2px;
+  animation: glitch 1s infinite;
+}

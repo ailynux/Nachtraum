@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X6Ig2eGi9s0=",
+  "dgSpecHash": "39wc7YwYdSo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Yamz\\Desktop\\Nachtraum_app\\Nachtraum\\ChatAppBackend\\ChatAppBackend.csproj",
+  "projectFilePath": "C:\\Users\\Yamz\\Desktop\\Nachtraum_app\\nachtraum\\chatappbackend\\ChatAppBackend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Yamz\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Yamz\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",

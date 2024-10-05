@@ -15,7 +15,8 @@ interface Message {
   color: string;
   text: string;
   shape: string;
-  avatarImage: string | null; // New field to store avatar image URL or null
+  avatarImage: string | null; // Optional avatar image
+  timestamp: string; // You can add timestamps for messages
 }
 
 // Define the User interface to include avatarImage
@@ -23,18 +24,19 @@ interface User {
   name: string;
   color: string;
   shape: string;
-  avatarImage: string | null; // New field to store avatar image URL or null
+  avatarImage: string | null; // Optional avatar image
 }
 
 const App: React.FC = () => {
   // State variables
-  const [user, setUser] = useState<User>({ name: "", color: "#007acc", shape: "😀", avatarImage: null }); // Add avatarImage here
+  const [user, setUser] = useState<User>({ name: "", color: "#ff0000", shape: "😀", avatarImage: null }); // Red for user color
   const [messages, setMessages] = useState<Message[]>([]);
   const [isTyping, setIsTyping] = useState(false);
   const [theme, setTheme] = useState("dark");
 
   // Function to send a message
   const sendMessage = (text: string) => {
+    const timestamp = new Date().toLocaleTimeString(); // Add timestamp to messages
     setMessages((prevMessages) => [
       ...prevMessages,
       {
@@ -42,7 +44,8 @@ const App: React.FC = () => {
         color: user.color,
         text,
         shape: user.shape,
-        avatarImage: user.avatarImage, // Include avatarImage in the message
+        avatarImage: user.avatarImage,
+        timestamp, // Include timestamp
       },
     ]);
     setIsTyping(false);
@@ -60,7 +63,6 @@ const App: React.FC = () => {
 
   // Effect to apply the theme class to the root element
   useEffect(() => {
-    // Apply or remove the 'dark' class on the root element
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
     } else {
@@ -69,7 +71,7 @@ const App: React.FC = () => {
   }, [theme]);
 
   return (
-    <div id="top" className="min-h-screen bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+    <div id="top" className={`min-h-screen transition-colors duration-300 ${theme === 'dark' ? 'bg-black text-red-500' : 'bg-gray-100 text-gray-900'}`}>
       {/* Navbar */}
       <Navbar theme={theme} toggleTheme={toggleTheme} />
 
@@ -83,22 +85,22 @@ const App: React.FC = () => {
 
         {/* Chat Application */}
         <section id="chat" className="py-16">
-          <div className="max-w-4xl mx-auto px-4">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Online Users Count */}
-            <div className="flex justify-start text-lg mb-6">
+            <div className={`flex justify-start text-lg mb-6 ${theme === 'dark' ? 'text-red-400' : 'text-gray-700'}`}>
               <OnlineUsers />
             </div>
 
             {/* User Avatar Section */}
             <div className="flex justify-center mb-6">
-              <UserAvatar user={user} setUser={setUser} /> {/* Pass updated user */}
+              <UserAvatar user={user} setUser={setUser} />
             </div>
 
             {/* Chat Section */}
-            <div className="rounded-lg p-6 mb-6 h-[500px] overflow-y-auto shadow-lg bg-white dark:bg-gray-700">
+            <div className={`rounded-lg p-6 mb-6 h-[500px] overflow-y-auto shadow-lg ${theme === 'dark' ? 'bg-gray-800 text-red-400' : 'bg-white text-gray-800'}`}>
               <Chat messages={messages} />
               {isTyping && (
-                <p className="text-gray-600 dark:text-gray-400 mt-2">
+                <p className={`${theme === 'dark' ? 'text-red-400' : 'text-gray-700'} mt-2`}>
                   Someone is typing...
                 </p>
               )}
@@ -116,9 +118,9 @@ const App: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white dark:bg-gray-900 py-6">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="text-gray-700 dark:text-gray-300">
+      <footer className={`${theme === 'dark' ? 'bg-gray-800 text-red-500' : 'bg-gray-100 text-gray-700'} py-6`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p>
             &copy; {new Date().getFullYear()} Nachtraum. Created by Ailyn Diaz.
           </p>
         </div>
