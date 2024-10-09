@@ -18,14 +18,34 @@
   </a>
 </p>
 
-Welcome to the world of **Nachtraum**, a real-time chat app where every conversation happens in the dark corners of the digital world. Personalize your chats with custom emojis and experience sleek, seamless communication like never before.
+Welcome to *Nachtraum*, a real-time chat app designed exclusively for developers. Connect with fellow coders, share knowledge, and collaborate in an intuitive, streamlined environment. Customize your chats with personalized emojis and enjoy a modern, seamless experience built for the coding community.
+
+<div align="center">
+
+<img src="https://github.com/user-attachments/assets/ee0a64ae-ef07-486c-9c5d-d4cb54684d4b" width="700" />
+<img src="https://github.com/user-attachments/assets/607f76bf-5006-442d-be5d-e628af02d3fb" width="700" />
+<img src="https://github.com/user-attachments/assets/9b1d6f51-0230-4f0e-bf29-73ffbc92de6e" width="700" />
+
+</div>
+
+
+*Above: updated version of the Nachtraum UI I overhauled the colors and will continue updating the UI with cool features.*
+## NEW Features being implemented 10/1/24
+- **Emoji Reactions**: React to specific messages with emojis, adding another layer of fun interaction.
+- **User Authentication**: Secure account creation, login, and chat history tied to your profile.
+- **Message History**: All previous conversations are stored and accessible at any time.
+  
+***
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/072828cd-aac9-4241-8228-8c27c123c0c2" alt="Nachtraum Chat Interface" width="700" />
-  <img src="https://github.com/user-attachments/assets/ced45217-707d-4505-a5da-c768191cd0c6" alt="Dark Mode and Light Mode" width="700" />
+  <img src="https://github.com/user-attachments/assets/072828cd-aac9-4241-8228-8c27c123c0c2" alt="Nachtraum Chat Interface" width="300" />
+  <img src="https://github.com/user-attachments/assets/ced45217-707d-4505-a5da-c768191cd0c6" alt="Dark Mode and Light Mode" width="300" />
 </p>
 
 *Above: Real-time chat interface featuring dark mode and fully customizable emoji support.*
+
+
+
 
 ## 🌟 Connect with Me
 
